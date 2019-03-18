@@ -1,0 +1,13 @@
+body {
+  font: 14px/16px $primaryFontRegular;
+  color: $baseColor;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+}
