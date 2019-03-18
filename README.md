@@ -2,8 +2,8 @@
 
 ## Commands:
 
-**mpm run build** - *production*
+**npm run build** - *production*
 
-**mpm run start** - *development*
+**npm run start** - *development*
 
-**mpm run test** - *tests*
+**npm run test** - *tests*
