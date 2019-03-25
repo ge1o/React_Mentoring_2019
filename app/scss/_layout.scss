@@ -1,33 +1,11 @@
 .wrapper {
-  width: 1000px;
-  margin: 0 auto;
   min-height: 100%;
   height: auto !important;
   height: 100%;
 }
 
-
-/* Header
------------------------------------------------------------------------------*/
-.header {
-  height: 150px;
-}
-
-
 /* Middle
 -----------------------------------------------------------------------------*/
 .content {
   padding: 0 0 100px;
-}
-
-
-
-
-/* Footer
------------------------------------------------------------------------------*/
-.footer {
-  width: 1000px;
-  margin: -100px auto 0;
-  height: 100px;
-  position: relative;
 }

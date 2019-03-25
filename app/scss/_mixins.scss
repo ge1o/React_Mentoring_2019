@@ -1,7 +1,16 @@
 @mixin clearfix {
+  zoom: 1;
+
+  &::before,
   &::after {
-    content: '';
+    content: '.';
     display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
     clear: both;
   }
 }

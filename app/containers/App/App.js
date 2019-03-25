@@ -1,26 +1,34 @@
 import React, {Component, memo} from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-const title = React.createElement('h2', {}, 'createElement way');
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import HomePage from '../../containers/HomePage/HomePage';
+import NotFoundPage from '../../containers/NotFoundPage/NotFoundPage';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {movies : []};
+    }
+
     render() {
         return (
             <>
-            <div class="wrapper">
+            <div className="wrapper">
 
-                <header class="header">
-                    header
-                </header>
+                <Header />
 
-                <main class="content">
-                    {process.env.NODE_ENV} mode
+                <main className="content">
+                    <Switch>
+                        <Route exact path={["/", "/movies"]} component={HomePage} />
+                        <Route path="" component={NotFoundPage} />
+                    </Switch>
                 </main>
 
             </div>
 
-            <footer class="footer">
-                footer
-            </footer>
+            <Footer />
             </>
         );
     }

@@ -1,0 +1,6 @@
+.page-not-found {
+
+  &__col {
+    @include make-md-column(12);
+  }
+}

@@ -1,0 +1,16 @@
+.footer {
+  margin: -56px 0 0;
+  height: 56px;
+  position: relative;
+  color: $footerColor;
+  background: $footerBg;
+
+  &__col {
+    @include make-md-column(12);
+  }
+
+  &__logo {
+    padding: 20px 0;
+    font-family: $primaryFontBold;
+  }
+}

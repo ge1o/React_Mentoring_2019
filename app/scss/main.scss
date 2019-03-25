@@ -1,8 +1,13 @@
 @import 'reset';
 @import 'normalize';
-@import 'vars';
-@import 'color-matrix';
+
+//$bootstrap-sass-asset-helper: true;
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss";
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss";
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
+//@import './node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
 @import 'typography';
-@import 'mixins';
 @import 'global';
 @import 'layout';

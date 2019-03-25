@@ -1,0 +1,6 @@
+.home-page {
+
+  &__col {
+    @include make-md-column(12);
+  }
+}

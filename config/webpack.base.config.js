@@ -26,7 +26,26 @@ module.exports = (options) => ({
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: [
+                                './app/scss/_vars.scss',
+                                './app/scss/_color-matrix.scss',
+                                './app/scss/_mixins.scss',
+                                './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss',
+                                './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss',
+                                './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss',
+                                './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss'
+                            ]
+                        },
+                    }
+                ],
+
             },
             {
                 test: /\.css$/,
@@ -34,7 +53,7 @@ module.exports = (options) => ({
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
+                test: /\.(eot|eot?#iefix|svg|otf|ttf|woff|woff2)$/,
                 use: 'file-loader'
             },
             {

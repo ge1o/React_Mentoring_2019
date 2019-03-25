@@ -1,0 +1,6 @@
+.list-header {
+
+  &__col {
+    @include make-md-column(12);
+  }
+}
