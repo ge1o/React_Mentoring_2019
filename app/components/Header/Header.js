@@ -7,6 +7,8 @@ import Button from '../../components/Button/Button.js';
 import './header.scss';
 
 class Header extends React.Component {
+    renderButton = () => <Button className="button button--header-search">Search</Button>;
+
     render() {
         return (
             <header>
@@ -18,9 +20,8 @@ class Header extends React.Component {
                                     <div className="header__logo">
                                         <Link className="header__logo-link" to="/">netflixroulette</Link>
                                     </div>
-                                    <Route path="/" render={(route) => route.location.pathname !== '/' ? (
-                                        <Button route={route} className="button button--header-search">Search</Button>
-                                    ):('')} />
+
+                                    <Route path="/movies" render={this.renderButton} />
                                 </div>
                             </div>
                         </div>

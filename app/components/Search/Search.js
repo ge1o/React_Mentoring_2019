@@ -12,10 +12,7 @@ class Search extends React.Component {
         this.startSearch = this.startSearch.bind(this);
     }
 
-    startSearch(e) {
-        // e.preventDefault();
-        console.log('-> searching ...');
-
+    startSearch() {
         this.setState(state => ({
             searching: !state.searching
         }));
