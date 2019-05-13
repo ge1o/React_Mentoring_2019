@@ -1,4 +1,3 @@
-import { persistStore, persistReducer } from 'redux-persist'
 import {
     LOAD_MOVIES,
     LOAD_MOVIES_SUCCESS,
@@ -18,8 +17,7 @@ export function loadMovies() {
 }
 
 export function loadMoviesSuccess(movies) {
-    console.log(movies, 'actions, movies')
-    return {type: LOAD_MOVIES_SUCCESS, movies};
+    return {type: LOAD_MOVIES_SUCCESS, payload: { ...movies } };
 }
 
 // export function loadMovies() {
